@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+        <div class="div  ">
+            <div class="header p-5 bg-color">
+                <div class="container  ">
+                    <nav class="navbar navbar-expand-lg bg-transparent text-white navbar-dark justify-content-center ">
+                        <div class=" w-100 d-flex justify-content-between ">
+                            <div class="div d-flex align-items-center w-25 me-5">
+                                <img src="img/logo.png" class="me-3    " alt="">
+                            <a class="navbar-brand text-white  logo" href="#"> Weather</a>
+                            </div>
+                            <div class="div">
+                                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                  </button>
+                                  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5 list-group">
+                                      <li class="nav-item ms-4">
+                                        <a class="nav-link  current-item p-2 item-w" aria-current="page" href="#">Home</a>
+                                      </li>
+                                      <li class="nav-item ms-4">
+                                        <a class="nav-link" href="#">News</a>
+                                      </li>
+                                      <li class="nav-item ms-4">
+                                        <a class="nav-link" href="#">Live cameras</a>
+                                      </li>
+                                      <li class="nav-item ms-4">
+                                        <a class="nav-link" href="#">Photos</a>
+                                      </li>
+                                      <li class="nav-item ms-4">
+                                        <a class="nav-link" href="#">Contact</a>
+                                      </li>
+                                      
+                                    </ul>
+                                    
+                                  </div>
+                            </div>
+                        </div>
+                      </nav>
+                </div>
+            </div>
+            <div class="bg-div  ">
+                <div class="container">
+                    <div class="input-group pt-5">
+                        <input type="text" class="form-control" placeholder="Change City" aria-label="Recipient's username" aria-describedby="button-addon2" id="search">
+                        <button class="btn bg-color text-white px-5" type="button" id="button-addon2">Find</button>
+                      </div>
+                </div>
+                <div class="weather container row m-auto g-2 rounded-3 p-0 m-0 overflow-hidden visually-hidden" id="weathercontent">
+                    <div class="col-lg-4 col-sm-12 text-center m-0 p-0 rounded-3  " id="main-weather">
+                        <div class="card-header d-flex justify-content-between  p-2 mb-5 card-head ">
+                            <p class="fs-5 fw-bolder">--</p>
+                            <p class="fs-5 fw-bolder">--</p>
+
+                        </div>
+                        <div class="weather-info mb-5">
+                            <p class=" city ">--</p>
+                        </div>
+                        <div class="degree mb-5">
+                            <h1 class=" main">-- <sup>o</sup> C</h1>
+                        </div>
+                        <div class="icon mb-5">
+                                <img src='//cdn.weatherapi.com/weather/64x64/night/113.png' alt="">
+
+                        </div>
+                        <div class="wind d-flex justify-content-around mt-3">
+                            <div class="hum d-flex">
+                                <i class="fa-regular fa-umbrella me-2"></i>
+                                <p>20%</p>
+                                
+
+                            </div>
+                            <div class="speed d-flex">
+                                <i class="fa-solid fa-wind me-2"></i>
+                                <p>18km/h</p>
+                            </div>
+                            <div class="direction d-flex">
+                                <i class="fa-brands fa-nfc-directional me-2"></i>
+                                <p>west</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 text-center m-0 p-0 rounded-3 card-1   " id="next">
+                        <div class="card-header d-flex justify-content-around  p-2 mb-5 card-dark">
+                            <p class="fs-5">Tuesday</p>
+                            
+                        </div>
+                        <div class="weather-info mb-5">
+                            <i class="fa-solid fa-cloud-moon fs-1"></i>
+                        </div>
+                        <div class="degree mb-5">
+                            <h1 class=" main2">-- <sup>o</sup> C</h1>
+                            <h3 class=" main3">-- <sup>o</sup> C</h3>
+                        </div>
+                        
+                        <div>
+                            <p class="fs-4" >--</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 text-center m-0 p-0 rounded-3  " id="after">
+                        <div class="card-header d-flex justify-content-around  p-2 mb-5 card-head ">
+                            <p class="fs-5">--</p>
+                            
+                        </div>
+                        <div class="weather-info mb-5">
+                            <i class="fa-solid fa-cloud-moon fs-1"></i>
+                        </div>
+                        <div class="degree mb-5">
+                            <h1>--</h1>
+                        </div>
+                        
+                        <div>
+                            <p class="fs-4" >--</p>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                
+            </div>
+            <div class="bg-div2">
+
+            </div>
+        </div>
+
+        <footer class="p-5">
+            <div class="container footer ">
+                <div class=" row sub justify-content-between align-items-center">
+                    <div class="col-md-7">
+                        <div class="subs">
+                            <div class="input-group m-3">
+                                <input type="text" class="form-control" placeholder="Change City" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <button class="btn bg-color text-white px-5" type="button" id="button-addon2">Subscribe</button>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="social-links text-center ">
+                            <a href="#" class=""><i class=" ms-5 rounded-5 fa fs-5   fa-facebook"></i></a>
+                            <a href="#"><i class=" ms-5 rounded-5 fa fs-5 fa-twitter"></i></a>
+                            <a href="#"><i class=" ms-5 rounded-5 fa fs-5 fa-google-plus"></i></a>
+                            <a href="#"><i class=" ms-5 rounded-5 fa fs-5 fa-pinterest"></i></a>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                <p class="text-white pt-5 fs-5">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+
+            </div>
+        </footer>
+
+        
+
+
+        <script src="https://kit.fontawesome.com/89e259a212.js" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
