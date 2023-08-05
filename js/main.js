@@ -14,7 +14,7 @@ const monthNames = ["January", "February", "March", "April", "May", "June", "Jul
 
 
 async function search(a) {
-  let req = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=d2e3e0fb53514b2981d204514230308&q=${a}&days=3&aqi=no&alerts=no`)
+  let req = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=d2e3e0fb53514b2981d204514230308&q=${a}&days=3&aqi=no&alerts=no`)
   ;
   
   if (req.ok && 400 != req.status) {
