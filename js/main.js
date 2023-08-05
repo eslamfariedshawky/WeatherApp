@@ -43,7 +43,7 @@ function current(location , current){
   // console.log(current.condition.icon)
   con(current.condition.icon)
 
-    var todayIcon = current.condition.icon.slice(2)
+    var todayIcon = current.condition.icon
     con(todayIcon)
     
     var box = `
