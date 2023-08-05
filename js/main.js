@@ -27,7 +27,7 @@ async function search(a) {
 var day = new Date()
   var today =days[day.getDay()]
   var month =monthNames[day.getMonth()];
-  var date = month.concat(" " , day.getDay())
+  var date = month.concat(" " , day.getDate())
   var tommorow = (day.getDay())+1
   var dayafter = tommorow+1
   if(day.getDay() == 6 )
